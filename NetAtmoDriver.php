@@ -1,6 +1,6 @@
 <?php
 
-namespace mauriziocingolani\perseo\drivers;
+namespace mauriziocingolani\perseodrivers;
 
 /**
  * Driver di comunicazione con dispositivi NetAtmo.
@@ -8,7 +8,7 @@ namespace mauriziocingolani\perseo\drivers;
  * @link https://dev.netatmo.com/
  * @author Maurizio Cingolani <mauriziocingolani74@gmail.com>
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
- * @version 0.1
+ * @version 0.2
  */
 class NetAtmoDriver {
 
