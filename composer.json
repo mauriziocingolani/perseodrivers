@@ -1,0 +1,28 @@
+
+{
+    "name": "mauriziocingolani/perseo_drivers",
+    "description": "Suite di drivers per i vari dispositivi",
+    "keywords": [
+        "perseo",
+        "drivers",
+        "iot"
+    ],
+    "authors": [
+        {
+            "name": "Maurizio Cingolani",
+            "email": "mauriziocingolani74@gmail.com",
+            "homepage": "http://www.mauriziocingolani.it"
+        }
+    ],
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "mauriziocingolani\\perseo_drivers\\": "/"
+        }
+    }
+}
