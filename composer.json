@@ -1,6 +1,6 @@
 
 {
-    "name": "mauriziocingolani/perseo_drivers",
+    "name": "mauriziocingolani/perseodrivers",
     "description": "Suite di drivers per i vari dispositivi",
     "keywords": [
         "perseo",
@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "mauriziocingolani\\perseo_drivers\\": "/"
+            "mauriziocingolani\\perseodrivers\\": "/"
         }
     }
 }
