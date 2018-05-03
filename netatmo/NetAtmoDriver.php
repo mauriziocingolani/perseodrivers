@@ -1,6 +1,6 @@
 <?php
 
-namespace mauriziocingolani\perseodrivers;
+namespace mauriziocingolani\perseodrivers\netatmo;
 
 /**
  * Driver di comunicazione con dispositivi NetAtmo.
