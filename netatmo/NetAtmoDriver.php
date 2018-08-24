@@ -8,7 +8,7 @@ namespace mauriziocingolani\perseodrivers\netatmo;
  * @link https://dev.netatmo.com/
  * @author Maurizio Cingolani <mauriziocingolani74@gmail.com>
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
- * @version 0.2
+ * @version 1.0
  */
 class NetAtmoDriver {
 
@@ -96,11 +96,11 @@ class NetAtmoDriver {
     }
 
     /**
-     * Restituisce i dati delle stazioni. Per il dettaglio della struttura dell'array restituito si veda
+     * Restituisce i dati delle stazioni. Per il dettaglio della struttura dell'array sorgente restituito si veda
      * {@link https://dev.netatmo.com/resources/technical/reference/weather/getstationsdata}.
      * 
      * @param string $token Token di autorizzazione
-     * @return array Dati delle stazioni
+     * @return NetAtmoData Dati delle stazioni
      */
     public function getStationsData($token) {
         if (!$token)
@@ -110,7 +110,7 @@ class NetAtmoDriver {
                 'access_token' => $token,
             ]);
             $response = file_get_contents(self::BASE_URL . '/api/getstationsdata', false, $context);
-            return json_decode($response, true);
+            return new NetAtmoData(json_decode($response, true));
         } catch (\Exception $e) {
             return $e->getMessage();
         }
