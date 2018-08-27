@@ -75,9 +75,9 @@ class NetAtmoDriver {
     /**
      * Esegue il refresh di un token non più valido in quanto scaduto.
      * Restituisce un array identico a quello restituito da {@link getToken}.
-     * @param type $client_id ID app
-     * @param type $client_secret Chiave segreta app
-     * @param type $token Token per il refresh
+     * @param string $client_id ID app
+     * @param string $client_secret Chiave segreta app
+     * @param string $token Token per il refresh
      * @return array Dati del nuovo token
      */
     public function refreshToken($client_id, $client_secret, $token) {
