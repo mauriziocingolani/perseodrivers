@@ -8,7 +8,7 @@ namespace mauriziocingolani\perseodrivers\netatmo;
  * @link https://dev.netatmo.com/
  * @author Maurizio Cingolani <mauriziocingolani74@gmail.com>
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
- * @version 1.0
+ * @version 1.0.1
  */
 class NetAtmoGenericDevice {
 
@@ -35,6 +35,26 @@ class NetAtmoGenericDevice {
         $this->data_type = $data['data_type'];
         $this->dashboard_data = $data['dashboard_data'];
     }
+
+    # info dispositivo
+
+    public function GetId() {
+        return $this->_id;
+    }
+
+    public function getType() {
+        return $this->type;
+    }
+
+    public function getFirmware() {
+        return $this->firmware;
+    }
+
+    public function getDataType() {
+        return $this->data_type;
+    }
+
+    # dati
 
     public function getData() {
         return $this->dashboard_data;
