@@ -81,7 +81,7 @@ class FitbitSleepRecord {
      * @param string $format
      * @return string 
      */
-    public function getEndTime($format = 'd/m/Y') {
+    public function getEndTime($format = 'H:i') {
         return $this->endTime->format($format);
     }
 
@@ -162,7 +162,7 @@ class FitbitSleepRecord {
      * @param string $format
      * @return string 
      */
-    public function getStartTime($format = 'd/m/Y') {
+    public function getStartTime($format = 'H:i') {
         return $this->startTime->format($format);
     }
 

@@ -103,6 +103,11 @@ class FitbitDriver {
         }
     }
 
+    /**
+     * Restituisce i dati dell'account attualmente connesso.
+     * @param string $token Token di autorizzazione
+     * @return \mauriziocingolani\perseodrivers\fitbit\FitbitUser
+     */
     public function getProfile($token) {
         try {
             $opts = ['http' => [
@@ -116,6 +121,12 @@ class FitbitDriver {
         }
     }
 
+    /**
+     * Restituisce i dati delle attività per la data indicata.
+     * @param string $token Token di autorizzazione
+     * @param string $date Data in formato 'Y-m-d'
+     * @return array 
+     */
     public function getDailyActivitiesSummary($token, $date) {
         try {
             $opts = ['http' => [
@@ -129,6 +140,12 @@ class FitbitDriver {
         }
     }
 
+    /**
+     * Restituisce i dati del sonno per la data indicata.
+     * @param string $token Token di autorizzazione
+     * @param string $date Data in formato 'Y-m-d'
+     * @return \mauriziocingolani\perseodrivers\fitbit\FitbitSleep
+     */
     public function getSleepLogs($token, $date) {
         try {
             $opts = ['http' => [

@@ -32,8 +32,8 @@ class FitbitSleepRecordLevelsSummaryInfo {
      * 
      * @return integer
      */
-    public function getMinutes() {
-        return $this->minutes;
+    public function getMinutes($readable = true) {
+        return $readable ? FitbitHelpers::GetReadableTimeFromMinutes($this->minutes) : $this->minutes;
     }
 
 }
