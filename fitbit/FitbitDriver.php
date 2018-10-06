@@ -8,7 +8,7 @@ namespace mauriziocingolani\perseodrivers\fitbit;
  * @link https://dev.fitbit.com/build/reference/web-api/
  * @author Maurizio Cingolani <mauriziocingolani74@gmail.com>
  * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
- * @version 1.0
+ * @version 1.0.1
  */
 class FitbitDriver {
 
@@ -154,6 +154,24 @@ class FitbitDriver {
             ]];
             $response = file_get_contents(self::API_URL . "/1.2/user/-/sleep/date/$date.json", false, stream_context_create($opts));
             return new FitbitSleep(json_decode($response, true));
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    /**
+     * Restituisce i dati degli bbiettivi di sonno.
+     * @param string $token Token di autorizzazione
+     * @return \mauriziocingolani\perseodrivers\fitbit\FitbitSleepGoal
+     */
+    public function getSleepGoals($token) {
+        try {
+            $opts = ['http' => [
+                    'method' => 'GET',
+                    'header' => "Authorization: Bearer $token",
+            ]];
+            $response = file_get_contents(self::API_URL . "/1/user/-/sleep/goal.json", false, stream_context_create($opts));
+            return new FitbitSleepGoal(json_decode($response, true));
         } catch (\Exception $e) {
             return $e->getMessage();
         }
