@@ -4,18 +4,18 @@ namespace mauriziocingolani\perseodrivers\fitbit;
 
 class FitbitActivityActivity {
 
-    public $activityId;
-    public $activityParentId;
-    public $calories;
-    public $description;
-    public $distance;
-    public $duration;
-    public $hasStartTime;
-    public $isFavorite;
-    public $logId;
-    public $name;
-    public $startTime;
-    public $steps;
+    private $activityId;
+    private $activityParentId;
+    private $calories;
+    private $description;
+    private $distance;
+    private $duration;
+    private $hasStartTime;
+    private $isFavorite;
+    private $logId;
+    private $name;
+    private $startTime;
+    private $steps;
 
     public function __construct(array $data) {
         foreach ($data as $prop => $value) :
